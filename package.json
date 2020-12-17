@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "jest --watchjest",
+    "lint": "node ./node_modules/eslint/bin/eslint.js index.js index.test.js ./lib/**/*.js"
   },
   "author": "Kori Reine",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "helmet": "^4.2.0"
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "eslint": "^7.14.0",
     "jest": "^26.6.3"
-
   }
 }
